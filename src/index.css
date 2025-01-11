@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "aeonik", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  @font-face {
+    font-family: "aeonik";
+    src: url("/fonts/Aeonik Medium.woff2") format("woff");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "aeonik";
+    src: url("/fonts/Aeonik Pro Bold.woff2") format("woff");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "aeonik";
+    src: url("/fonts/Aeonik Pro Light.woff2") format("woff");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "aeonik";
+    src: url("/fonts/Aeonik Regular.woff2") format("woff");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "monaSan";
+    src: url("/fonts/Aeonik.woff") format("woff");
+    font-weight: 600;
+  }
+
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+@layer utilities {
+  body {
+    @apply font-aeonik;
+  }
+
+  .container {
+    @apply p-[100px];
+  }
+
+  .para {
+    @apply font-aeonik font-normal text-base tracking-[-1%];
+  }
+
+  .para18 {
+    @apply font-medium text-[18px] leading-[27px] tracking-tight;
+  }
+
+  .para24 {
+    @apply font-medium text-[24px] leading-[28.8px] tracking-[-1%];
+  }
+
+  .head28 {
+    @apply font-medium text-4xl md:text-5xl tracking-[-1%] md:leading-[57.6px];
+  }
+
+  .flexBetween {
+    @apply flex justify-between items-center;
+  }
+
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+
+  .flexStart {
+    @apply flex justify-center items-start;
+  }
+
+  .app-icon {
+    @apply motion-scale-in-[0.2] motion-translate-x-in-[-199%] motion-translate-y-in-[0%] motion-opacity-in-[0%] motion-blur-in-[10px] motion-duration-[1.35s] motion-duration-[1.20s]/scale motion-duration-[1.50s]/translate motion-delay-[0.17s]/opacity motion-duration-[0.75s]/blur;
+  }
+
+  .heroImg {
+    @apply motion-translate-x-in-[0%] motion-translate-y-in-[163%] motion-opacity-in-[0%] motion-duration-[0.00s] motion-duration-[0.70s]/translate motion-delay-[0.80s]/translate motion-duration-[0.58s]/opacity motion-delay-[0.92s]/opacity;
+  }
+
+  .reason-box {
+    @apply bg-white border border-strokebd rounded-[8px] w-full h-full p-6 flexStart gap-6 flex-col;
+  }
+}

@@ -89,6 +89,6 @@ body {
   }
 
   .reason-box {
-    @apply bg-white border border-strokebd rounded-[8px] w-full h-full p-6 flexStart gap-6 flex-col;
+    @apply bg-white border border-strokebd rounded md:rounded-[8px] w-full h-full p-3 md:p-6 flexStart gap-6 flex-col;
   }
 }

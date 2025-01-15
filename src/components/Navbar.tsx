@@ -19,13 +19,13 @@ const navVariants = {
 const Navbar = () => {
   return (
     <motion.nav
-      className="px-20 py-5 flexBetween"
+      className="px-5 lg:px-20 py-5 flexBetween"
       variants={navVariants}
       initial="hidden"
       animate="visible"
     >
       <img src="icons/webLogo.svg" alt="logo" />
-      <div className="flexCenter gap-20">
+      <div className="gap-20 hidden md:flexCenter">
         <ul className="flexCenter gap-8 ">
           <li className="font-aeonik font-medium text-base text-grey">
             <a href="">Documentations</a>
@@ -38,6 +38,9 @@ const Navbar = () => {
           </li>
         </ul>
         <Button text="Download App" />
+      </div>
+      <div className="md:hidden">
+        <img src="icons/menu.svg" alt="" />
       </div>
     </motion.nav>
   );

@@ -24,7 +24,7 @@ const moreInfo = [
 const MoreReason = () => {
   return (
     <section className=" bg-moreRbgLine bg-cover bg-center">
-      <div className="py-[100px] lg:px-[60px] xl:px-[100px] flex gap-[125px] ">
+      <div className="py-20 px-5 md:py-[100px] lg:px-[60px] xl:px-[100px] flex flex-col lg:flex-row gap-8 xl:gap-[125px] ">
         <div className="flexStart gap-20 flex-col">
           <div className="flexStart gap-4 flex-col">
             <div className="flexCenter">
@@ -33,20 +33,20 @@ const MoreReason = () => {
               </p>
               <img src="icons/smile.svg" alt="" />
             </div>
-            <h2 className="max-w-[505px] text-[40px] font-medium leading-[48px] tracking-[-1%] text-black">
+            <h2 className="w-full md:max-w-[505px] text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black">
               Centralized and accessible hub for managing your finances with
               ease.
             </h2>
           </div>
-          <div className="w-[610px] h-[570px] bg-moreImg bg-center bg-cover relative rounded-[32px]">
-            <div className="absolute px-4 py-2 gap-1 w-fit top-[505px] left-[9px] flexCenter">
+          <div className="w-full lg:w-[610px] h-[380px] md:h-[470px] md:rounded-2xl lg:h-[570px] rounded bg-moreImg bg-center bg-cover relative lg:rounded-[32px]">
+            <div className="absolute px-4 py-2 gap-1 w-fit bottom-5 left-2 flexCenter">
               <img src="icons/icon-park-solid_play.svg" alt="" />
               <p className="text-base font-medium leading-[19.2px] text-white">
                 Play this video
                 <span className="block">To see why we built Pocketti</span>
               </p>
             </div>
-            <div className="absolute bg-[#FFFFFF33] px-4 py-2 gap-1 w-fit rounded-[32px] border border-white top-[24px] left-[442px] flexCenter">
+            <div className="absolute bg-[#FFFFFF33] px-4 py-2 gap-1 w-fit rounded-[32px] border border-white top-6 right-5 flexCenter">
               <img src="icons/ion_play.svg" alt="" />
               <p className="para18 text-white">Play video</p>
             </div>

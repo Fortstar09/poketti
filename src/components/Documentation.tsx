@@ -2,8 +2,8 @@ import Button from "./ui/Button";
 
 const Documentation = () => {
   return (
-    <section className="py-[120px] px-[100px] mb-[86px]">
-      <div className="flex gap-[125px]">
+    <section className="py-10 px-5 lg:py-[120px] lg:px-[100px] mb-10 lg:mb-[86px]">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-10 lg:gap-[125px]">
         <div className="flexStart flex-col gap-8">
           <div className="flexStart flex-col gap-4">
             <div className="flexCenter gap-1">
@@ -12,7 +12,7 @@ const Documentation = () => {
               </p>
               <img src="icons/icon-park-solid_folder-code.svg" alt="" />
             </div>
-            <h2 className="max-w-[505px] text-[40px] font-medium leading-[48px] tracking-[-1%] text-black">
+            <h2 className="max-w-[505px] text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black">
               Powerful payments APIs for product teams
             </h2>
             <p className="text-grey para max-w-[505px]">
@@ -25,7 +25,7 @@ const Documentation = () => {
               <Button text="See documentations" />
             </div>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-col md:flex-row gap-2">
             <Mark>
               <EachMark text="Register users in seconds" />
               <EachMark text="Collect authorization via SDK" />
@@ -39,7 +39,7 @@ const Documentation = () => {
         <img
           src="images/apiImg.svg"
           alt=""
-          className="px-6 pt-6 bg-[#f1f1f1] rounded-[32px]"
+          className="px-3 py-3 md:px-6 md:pt-6 bg-[#f1f1f1] rounded rounded-t-[32px] md:rounded-[32px]"
         />
       </div>
     </section>
@@ -56,7 +56,7 @@ const EachMark = ({ text }: { text: string }) => {
   return (
     <div className="flex gap-2">
       <img src="icons/tick-circle.svg" alt="" />
-      <p className="para text-grey">{text}</p>
+      <p className="text-sm md:para text-grey">{text}</p>
     </div>
   );
 };

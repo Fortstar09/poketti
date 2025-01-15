@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="bg-herobgLine bg-white mb-16 bg-cover bg-center">
-      <div className="flexBetween flex-col lg:flex-row gap-y-10 px-[100px] py-[120px]">
+    <section className="bg-herobgLine bg-white mb-4 lg:mb-16 bg-cover bg-center">
+      <div className="flexBetween flex-col lg:flex-row gap-y-10 px-5 py-20 lg:px-[100px] lg:py-[120px]">
         <div className="flexStart flex-col gap-8">
-          <div className="flexCenter flex-col gap-4 max-w-[600px]">
+          <div className="flexCenter flex-col gap-4 w-full lg:max-w-[600px]">
             <BoxReveal boxColor={"#301A11"} duration={1.5}>
-              <h1 className="text-[64px] text-black font-bold leading-[76.8px]">
+              <h1 className="text-4xl lg:text-[64px] text-black font-bold lg:leading-[76.8px]">
                 Simplify digital payments and send money effortlessly
               </h1>
             </BoxReveal>
@@ -21,7 +21,7 @@ const Hero = () => {
             </BoxReveal>
           </div>
           <BoxReveal boxColor={"#301A11"} duration={1.5}>
-            <div className="flexCenter py-3 px-4 gap-4 bg-[#FFECE7] border border-stroke rounded-2xl">
+            <div className="flexCenter py-3 px-4 gap-4 bg-[#FFECE7] border border-stroke rounded md:rounded-2xl">
               <motion.img
                 whileHover={{ scale: 1.8 }}
                 src="icons/hero-qr.svg"
@@ -29,10 +29,10 @@ const Hero = () => {
                 className="p-[5px] border border-white bg-[#FFAA85] rounded"
               />
               <div className="flexCenter flex-col gap-2">
-                <p className="para18 text-grey">
+                <p className="para md:para18 text-grey">
                   Scan to Download Pocketti App
                 </p>
-                <div className="flexCenter gap-3">
+                <div className="md:flexCenter hidden gap-3">
                   <img src="icons/play-store.svg" alt="" />
                   <img src="icons/apple-store.svg" alt="" />
                 </div>
@@ -41,11 +41,11 @@ const Hero = () => {
           </BoxReveal>
         </div>
         <div className="relative">
-          <div className="heroImg bg-heroBg bg-cover bg-center rounded-[20px] border border-[#EFD654] w-[457px]">
+          <div className="heroImg bg-heroBg bg-cover bg-center rounded-[20px] border border-[#EFD654] w-full lg:w-[457px]">
             <img
               src="images/hero-img.png"
               alt="hero-image"
-              className=" px-4 pb-6"
+              className="md:px-4 md:pb-6 rounded"
             />
           </div>
           <Alert name="slime" className="bottom-16 -right-10" />
@@ -96,7 +96,7 @@ const Alert = ({ name, className }: AlertProps) => {
       initial="hidden"
       animate="visible"
       // animate="animateOne"
-      className={`flexCenter gap-2 absolute ${className}  py-2 px-4 bg-white border cursor-pointer border-[#DDDDDDDD] rounded-[8px]`}
+      className={`md:flexCenter gap-2 absolute ${className} hidden py-2 px-4 bg-white border cursor-pointer border-[#DDDDDDDD] rounded-[8px]`}
     >
       <img src="icons/check-circle.svg" alt="" />
       <div className="flexStart flex-col w-[150px]">

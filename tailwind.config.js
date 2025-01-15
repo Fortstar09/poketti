@@ -18,7 +18,7 @@ export default {
         black: '#301A11',
         grey1: '#374151',
         stroke: '#F6F6F6',
-        strokebd: '#E8E8E8',
+        strokebd: '#E8E8E8'
       },
       backgroundImage: {
         'herobgLine': "url('images/bg-lines.png')",
@@ -27,11 +27,33 @@ export default {
         'reasonbgLine': "url('images/reason-bg.png')",
         'moreRbgLine': "url('images/moreRbg-line.png')",
         'moreImg': "url('images/moreImg.png')",
-        'actionBg': "url('images/actionBg.png')",
+        'actionBg': "url('images/actionBg.png')"
       },
       fontFamily: {
-        aeonik: 'aeonik',
+        aeonik: 'aeonik'
       },
+      keyframes: {
+        marquee: {
+          from: {
+            transform: 'translateX(0)'
+          },
+          to: {
+            transform: 'translateX(calc(-100% - var(--gap)))'
+          }
+        },
+        'marquee-vertical': {
+          from: {
+            transform: 'translateY(0)'
+          },
+          to: {
+            transform: 'translateY(calc(-100% - var(--gap)))'
+          }
+        }
+      },
+      animation: {
+        marquee: 'marquee var(--duration) infinite linear',
+        'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+      }
     }
   },
   plugins: [require("tailwindcss-animate"), require('tailwindcss-motion')],

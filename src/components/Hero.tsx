@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="bg-herobgLine bg-white mb-4 lg:mb-16 bg-cover bg-center">
-      <div className="flexBetween flex-col lg:flex-row gap-y-10 px-5 py-20 lg:px-[100px] lg:py-[120px]">
+      <div className="flex justify-between items-start lg:items-center flex-col lg:flex-row gap-y-10 px-5 py-20 lg:px-14 xl:px-[100px] xl:py-[120px]">
         <div className="flexStart flex-col gap-8">
-          <div className="flexCenter flex-col gap-4 w-full lg:max-w-[600px]">
+          <div className="flexStart flex-col gap-4 w-full lg:max-w-[600px]">
             <BoxReveal boxColor={"#301A11"} duration={1.5}>
-              <h1 className="text-4xl lg:text-[64px] text-black font-bold lg:leading-[76.8px]">
+              <h1 className="text-4xl lg:text-6xl xl:text-[64px] text-black font-bold max-w-[505px] xl:max-w-full lg:leading-[60px] xl:leading-[76.8px]">
                 Simplify digital payments and send money effortlessly
               </h1>
             </BoxReveal>
             <BoxReveal boxColor={"#301A11"} duration={1.5}>
-              <p className="para text-grey">
+              <p className="para text-grey max-w-[505px] xl:max-w-full">
                 Streamline financial transactions with our user-friendly
                 platform, making payments a breeze and show love by sending
                 funds securely and swiftly to your cherished ones.
@@ -41,11 +41,11 @@ const Hero = () => {
           </BoxReveal>
         </div>
         <div className="relative">
-          <div className="heroImg bg-heroBg bg-cover bg-center rounded-[20px] border border-[#EFD654] w-full lg:w-[457px]">
+          <div className="heroImg bg-heroBg bg-cover bg-center rounded-[20px] border border-[#EFD654] w-full md:w-[457px]">
             <img
               src="images/hero-img.png"
               alt="hero-image"
-              className="md:px-4 md:pb-6 rounded"
+              className="lg:px-4 lg:pb-6 rounded"
             />
           </div>
           <Alert name="slime" className="bottom-16 -right-10" />
@@ -96,7 +96,7 @@ const Alert = ({ name, className }: AlertProps) => {
       initial="hidden"
       animate="visible"
       // animate="animateOne"
-      className={`md:flexCenter gap-2 absolute ${className} hidden py-2 px-4 bg-white border cursor-pointer border-[#DDDDDDDD] rounded-[8px]`}
+      className={`lg:flexCenter gap-2 absolute ${className} hidden py-2 px-4 bg-white border cursor-pointer border-[#DDDDDDDD] rounded-[8px]`}
     >
       <img src="icons/check-circle.svg" alt="" />
       <div className="flexStart flex-col w-[150px]">

@@ -11,15 +11,15 @@ const socials = [
     name: "LinkedIn",
     link: "#",
   },
-  {
-    name: "X(Twitter)",
-    link: "#",
-  },
+  // {
+  //   name: "X(Twitter)",
+  //   link: "#",
+  // },
 ];
 
 const Footer = () => {
   return (
-    <footer className="pt-20 px-5 lg:px-[100px] pb-[100px]">
+    <footer className="pt-20 px-5 xl:px-[100px] lg:px-14 pb-[100px]">
       <div className="flexCenter gap-10 lg:gap-20 flex-col">
         <div className="flex w-full justify-between lg:items-center items-start gap-4 lg:gap-0 flex-col lg:flex-row">
           <img src="icons/webLogo.svg" alt="logo" />

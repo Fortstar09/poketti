@@ -1,6 +1,6 @@
 const FAQ = () => {
   return (
-    <section className="px-5 lg:px-[100px] py-16 lg:py-[100px]">
+    <section className="px-5 xl:px-[100px] lg:px-14 py-16 lg:py-[100px]">
       <div className="flex flex-col gap-10 md:gap-20">
         <div className="flexStart gap-2 flex-col">
           <div className="flexCenter gap-1">

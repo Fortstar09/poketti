@@ -2,7 +2,7 @@ const Reason = () => {
   return (
     <div className="relative">
       <div className="md:bg-reasonbgLine bg-cover center w-full h-[650px] absolute z-10 top-[23.5%]"></div>
-      <section className="py-20 px-5 md:py-[115px] lg:px-[60px] xl:px-[100px] bg-[#FAFAFA]">
+      <section className="py-20 px-5 md:py-[115px] lg:px-14 xl:px-[100px] bg-[#FAFAFA]">
         <div className="flexStart gap-[47px] relative z-20 flex-col">
           <div className="flex w-full">
             <div className="flexStart gap-4 flex-col max-w-[505px]">
@@ -15,7 +15,7 @@ const Reason = () => {
               <h2 className=" text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black">
                 Manage all your financial services within a single app
               </h2>
-              <p className="text-base font-normal tracking-[-1%] text-grey">
+              <p className="text-base font-normal tracking-[-1%] text-grey ">
                 With our app, you can seamlessly access banking, payments, and
                 investments. Simplify your financial life and stay in control
                 with just a few taps.
@@ -28,7 +28,7 @@ const Reason = () => {
                 <h2 className="para18 lg:para24 text-black mb-2">
                   Global Payment
                 </h2>
-                <p className="para text-grey">
+                <p className="para text-grey max-w[500px] mb:max-w-full">
                   Spend cross-border with ease and send money to your loved ones
                   overseas. Paying for international services are swift and
                   secure.
@@ -46,16 +46,16 @@ const Reason = () => {
                 <h2 className="para18 lg:para24 text-black mb-2">
                   Bills Payment
                 </h2>
-                <p className="para text-grey">
+                <p className="para text-grey max-w[500px] mb:max-w-full">
                   Pay your bills with ease using the app, pay for Spotify,
                   Netflix, Apple music, Amazon and so much more.
                 </p>
               </div>
             </div>
             <div className="!bg-primary reason-box row-start-3 lg:row-start-2 xl:row-start-2">
-              <div className="flexCenter gap-[47px] flex-col">
-                <div className="flexCenter gap-[14px] flex-col px-6">
-                  <div className="bg-white border border-[#F0F0F0] rounded-[8px] px-4 pb-4">
+              <div className="flexCenter gap-5 md:gap-[47px] flex-col">
+                <div className="flexCenter gap-[14px] flex-col px-0  xl:px-6">
+                  <div className="bg-white border border-[#F0F0F0] rounded-[8px] px-2 md:px-4 pb-4">
                     <h2 className="text-[14px] font-bold text-[#4F4F4F] pt-1 leading-6 tracking-[-1%]">
                       Payment link
                     </h2>
@@ -81,7 +81,7 @@ const Reason = () => {
                   <h2 className="para18 lg:para24 text-white mb-2">
                     Spend Tracking
                   </h2>
-                  <p className="text-sm md:para text-white">
+                  <p className="text-sm md:para text-white max-w[500px] mb:max-w-full">
                     Say goodbye to waiting periods and delays as you
                     effortlessly transfer funds to friends, family, or vendors
                     quickly in real-time.
@@ -94,7 +94,7 @@ const Reason = () => {
                 <h2 className="para18 lg:para24 text-black mb-2">
                   Spend Tracking
                 </h2>
-                <p className="text-sm md:para text-grey">
+                <p className="text-sm md:para text-grey max-w[500px] mb:max-w-full">
                   Gain insights into your spending habits with our Spend
                   Tracking feature. Monitor your expenses, categorize
                   transactions, and set budget goals all within our

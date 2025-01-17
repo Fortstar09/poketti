@@ -3,7 +3,7 @@ import { MarqueeDemo } from "./MarqueeDemo";
 const Testimonials = () => {
   return (
     <section className="bg-[#fafafa]">
-      <div className="flexStart gap-2 flex-col pt-[70px] pb-[33px] px-5 lg:px-[100px]">
+      <div className="flexStart gap-2 flex-col pt-[70px] pb-[33px] lg:px-14 px-5 xl:px-[100px]">
         <div className="flexCenter gap-1">
           <p className="text-base font-normal text-primary">Testimonials</p>
           <img src="icons/mingcute_chat-2-fill.svg" alt="" />

@@ -19,7 +19,7 @@ const navVariants = {
 const Navbar = () => {
   return (
     <motion.nav
-      className="px-5 lg:px-20 py-5 flexBetween"
+      className="px-5 lg:px-14 xl:px-20 py-5 flexBetween"
       variants={navVariants}
       initial="hidden"
       animate="visible"

@@ -2,9 +2,9 @@ import Button from "./ui/Button";
 
 const Action = () => {
   return (
-    <section className="px-5 py-10 lg:p-[100px]">
-      <div className="bg-actionBg bg-center bg-cover rounded-2xl md:rounded-[32px] px-5 py-10 md:py-[85px] md:px-[182px]">
-        <div className="flexCenter flex-col gap-5 md: gap-[50px]">
+    <section className="px-5 py-10 lg:px-14 lg:py-[100px] xl:p-[100px]">
+      <div className="bg-actionBg bg-center bg-cover rounded-2xl md:rounded-[32px] px-5 py-10 md:px-10 md: xl:py-[85px] xl:px-[182px]">
+        <div className="flexCenter flex-col gap-5 md:gap-[50px]">
           <div className="flexCenter flex-col gap-10">
             <div className="flexCenter flex-col gap-4">
               <h2 className="text-4xl md:text-[64px] w-full md:leading-[76.8px] md:tracking-[-1%] text-center text-white font-medium">

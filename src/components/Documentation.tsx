@@ -2,8 +2,8 @@ import Button from "./ui/Button";
 
 const Documentation = () => {
   return (
-    <section className="py-10 px-5 lg:py-[120px] lg:px-[100px] mb-10 lg:mb-[86px]">
-      <div className="flex flex-col justify-center items-center md:flex-row gap-10 lg:gap-[125px]">
+    <section className="py-10 px-5  lg:py-[120px] lg:px-14 xl:px-[100px] mb-10 lg:mb-[86px]">
+      <div className="flex flex-col justify-center lg:items-center  lg:flex-row gap-10  xl:gap-[125px]">
         <div className="flexStart flex-col gap-8">
           <div className="flexStart flex-col gap-4">
             <div className="flexCenter gap-1">
@@ -39,7 +39,7 @@ const Documentation = () => {
         <img
           src="images/apiImg.svg"
           alt=""
-          className="px-3 py-3 md:px-6 md:pt-6 bg-[#f1f1f1] rounded rounded-t-[32px] md:rounded-[32px]"
+          className="w-[500px] px-3 py-3 md:px-6 md:pt-6 bg-[#f1f1f1] rounded rounded-t-[32px]"
         />
       </div>
     </section>

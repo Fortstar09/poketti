@@ -20,7 +20,7 @@ const InfoChat = () => {
   }, [isInView, mainControls]);
 
   return (
-    <section className="relative bg-white bg-chatBg bg-cover bg-center px-5 py-2 md:py-0 md:p-[100px]">
+    <section className="relative bg-white bg-chatBg bg-cover bg-center px-5 py-2 md:py-0 lg:px-14 xl:p-[100px]">
       <div ref={ref} className="flexCenter flex-col gap-y-12">
         <div className="relative overflow-hidden">
           <img src="icons/userchat_1.svg" className="w-8 mb-2" alt="pic" />

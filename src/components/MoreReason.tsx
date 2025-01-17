@@ -24,7 +24,7 @@ const moreInfo = [
 const MoreReason = () => {
   return (
     <section className=" bg-moreRbgLine bg-cover bg-center">
-      <div className="py-20 px-5 md:py-[100px] lg:px-[60px] xl:px-[100px] flex flex-col lg:flex-row gap-8 xl:gap-[125px] ">
+      <div className="py-20 px-5 md:py-[100px] lg:px-14 xl:px-[100px] flex flex-col lg:flex-row gap-8 xl:gap-[125px] ">
         <div className="flexStart gap-20 flex-col">
           <div className="flexStart gap-4 flex-col">
             <div className="flexCenter">

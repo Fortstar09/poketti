@@ -1,25 +1,80 @@
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const Pvariants = {
+  hidden: { opacity: 0, y: 75 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const Reason = () => {
+  const mainControls = useAnimation();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView, mainControls]);
+
   return (
     <div className="relative">
       <div className="md:bg-reasonbgLine bg-cover center w-full h-[650px] absolute z-10 top-[23.5%]"></div>
-      <section className="py-20 px-5 md:py-[115px] lg:px-14 xl:px-[100px] bg-[#FAFAFA]">
+      <section
+        ref={ref}
+        className="py-20 px-5 md:py-[115px] lg:px-14 xl:px-[100px] bg-[#FAFAFA]"
+      >
         <div className="flexStart gap-[47px] relative z-20 flex-col">
-          <div className="flex w-full">
-            <div className="flexStart gap-4 flex-col max-w-[505px]">
-              <div className="flexCenter gap-1">
+          <div className="flex w-full relative overflow-hidden">
+            <div className="flexStart gap-4 overflow-hidden flex-col max-w-[505px]">
+              <motion.div
+                variants={Pvariants}
+                initial="hidden"
+                animate={mainControls}
+                transition={{
+                  delay: 0.8,
+                  duration: 0.9,
+                  easing: [0.17, 0.55, 0.55, 1],
+                }}
+                className="flexCenter gap-1"
+              >
                 <p className="text-base text-primary font-normal">
                   Why choose Pocketti
                 </p>
                 <img src="icons/thinkEmoji.svg" alt="" />
-              </div>
-              <h2 className=" text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black">
+              </motion.div>
+              <motion.h2
+                variants={Pvariants}
+                initial="hidden"
+                animate={mainControls}
+                transition={{
+                  duration: 0.9,
+                  easing: [0.17, 0.55, 0.55, 1],
+                  delay: 0.8,
+                }}
+                className=" text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black"
+              >
                 Manage all your financial services within a single app
-              </h2>
-              <p className="text-base font-normal tracking-[-1%] text-grey ">
+              </motion.h2>
+              <motion.p
+                variants={Pvariants}
+                initial="hidden"
+                animate={mainControls}
+                // whileInView={{ x: 75 }}
+                transition={{
+                  duration: 0.9,
+                  easing: [0.17, 0.55, 0.55, 1],
+                  delay: 0.8,
+                }}
+                className="text-base font-normal tracking-[-1%] text-grey"
+              >
                 With our app, you can seamlessly access banking, payments, and
                 investments. Simplify your financial life and stay in control
                 with just a few taps.
-              </p>
+              </motion.p>
             </div>
           </div>
           <div className="grid grid-cols gap-x-0 md:gap-x-5 gap-y-8 md:gap-y-[31px]">

@@ -1,29 +1,82 @@
+import { motion, useAnimation, useInView } from "framer-motion";
 import Button from "./ui/Button";
+import { useEffect, useRef } from "react";
+
+const Pvariants = {
+  hidden: { opacity: 0, y: 75 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Documentation = () => {
+  const mainControls = useAnimation();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView, mainControls]);
+
   return (
     <section className="py-10 px-5  lg:py-[120px] lg:px-14 xl:px-[100px] mb-10 lg:mb-[86px]">
-      <div className="flex flex-col justify-center lg:items-center  lg:flex-row gap-10  xl:gap-[125px]">
+      <div
+        ref={ref}
+        className="flex flex-col justify-center lg:justify-between lg:items-center  lg:flex-row gap-10  xl:gap-[125px]"
+      >
         <div className="flexStart flex-col gap-8">
-          <div className="flexStart flex-col gap-4">
-            <div className="flexCenter gap-1">
+          <div className="flexStart relative overflow-hidden flex-col gap-4">
+            <motion.div
+              variants={Pvariants}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                delay: 0.8,
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+              }}
+              className="flexCenter gap-1"
+            >
               <p className="text-base font-normal text-primary">
                 Documentation
               </p>
               <img src="icons/icon-park-solid_folder-code.svg" alt="" />
-            </div>
-            <h2 className="max-w-[505px] text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black">
+            </motion.div>
+            <motion.h2
+              variants={Pvariants}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                delay: 0.8,
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+              }}
+              className="max-w-[505px] text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black"
+            >
               Powerful payments APIs for product teams
-            </h2>
-            <p className="text-grey para max-w-[505px]">
+            </motion.h2>
+            <motion.p
+              variants={Pvariants}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                delay: 0.8,
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+              }}
+              className="text-grey para max-w-[505px]"
+            >
               Our developer guide helps developers learn how to build amazing
               payment experiences with Pocketti's APIs. Pocketti provides
               generic, low-level, secure, and PCI-compliant RESTful APIs which
               allow you to accept and make payments.
-            </p>
-            <div className="mt-1">
+            </motion.p>
+            <motion.div>
               <Button text="See documentations" />
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-col md:flex-row gap-2">
             <Mark>

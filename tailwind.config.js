@@ -21,13 +21,13 @@ export default {
         strokebd: '#E8E8E8'
       },
       backgroundImage: {
-        'herobgLine': "url('images/bg-lines.png')",
-        'heroBg': "url('images/hero-img-back.png')",
-        'chatBg': "url('images/infoBg.svg')",
-        'reasonbgLine': "url('images/reason-bg.png')",
-        'moreRbgLine': "url('images/moreRbg-line.png')",
-        'moreImg': "url('images/moreImg.png')",
-        'actionBg': "url('images/actionBg.png')"
+        herobgLine: "url('/images/bg-lines.png')",
+        heroBg: "url('/images/hero-img-back.png')",
+        chatBg: "url('/images/infoBg.svg')",
+        reasonbgLine: "url('/images/reason-bg.png')",
+        moreRbgLine: "url('/images/moreRbg-line.png')",
+        moreImg: "url('/images/moreImg.png')",
+        actionBg: "url('/images/actionBg.png')",
       },
       fontFamily: {
         aeonik: 'aeonik'

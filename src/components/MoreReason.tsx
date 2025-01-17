@@ -1,3 +1,11 @@
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const Pvariants = {
+  hidden: { opacity: 0, y: 75 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const moreInfo = [
   {
     title: "Super-fast",
@@ -22,21 +30,57 @@ const moreInfo = [
 ];
 
 const MoreReason = () => {
+  const mainControls = useAnimation();
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView, mainControls]);
+
   return (
     <section className=" bg-moreRbgLine bg-cover bg-center">
       <div className="py-20 px-5 md:py-[100px] lg:px-14 xl:px-[100px] flex flex-col lg:flex-row gap-8 xl:gap-[125px] ">
         <div className="flexStart gap-20 flex-col">
-          <div className="flexStart gap-4 flex-col">
-            <div className="flexCenter">
+          <div
+            ref={ref}
+            className="flexStart relative overflow-hidden gap-4 flex-col"
+          >
+            <motion.div
+              variants={Pvariants}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                delay: 0.8,
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+              }}
+              className="flexCenter"
+            >
               <p className="text-base font-normal text-primary">
                 More reasons to use Poketti
               </p>
               <img src="icons/smile.svg" alt="" />
-            </div>
-            <h2 className="w-full md:max-w-[505px] text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black">
+            </motion.div>
+            <motion.h2
+              variants={Pvariants}
+              initial="hidden"
+              animate={mainControls}
+              transition={{
+                delay: 0.8,
+                duration: 0.9,
+                easing: [0.17, 0.55, 0.55, 1],
+              }}
+              className="w-full md:max-w-[505px] text-3xl md:text-[40px] font-medium md:leading-[48px] md:tracking-[-1%] text-black"
+            >
               Centralized and accessible hub for managing your finances with
               ease.
-            </h2>
+            </motion.h2>
           </div>
           <div className="w-full lg:w-[610px] h-[380px] md:h-[470px] md:rounded-2xl lg:h-[570px] rounded bg-moreImg bg-center bg-cover relative lg:rounded-[32px]">
             <div className="absolute px-4 py-2 gap-1 w-fit bottom-5 left-2 flexCenter">

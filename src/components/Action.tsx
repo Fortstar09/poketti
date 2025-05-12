@@ -27,7 +27,7 @@ const Action = () => {
               </div>
             </div>
           </div>
-          <div className="flexCenter flex-col md:flex-row w-full lg:w-[876px] border-t border-[#EDEDED1F] pt-8 gap-5 md:gap-[100px]">
+          <div className="flexCenter flex-row md:flex-row w-full lg:w-[876px] border-t border-[#EDEDED1F] pt-8 gap-5 md:gap-[100px]">
             <h2 className="text-white font-bold text-[20px] leading-[30px] tracking-[-1%]">
               Get Pocketti
             </h2>
@@ -38,6 +38,7 @@ const Action = () => {
               <div className="p-[5px] md:p-[10px] rounded-[10px] cursor-pointer bg-[#FFAA85] flexCenter">
                 <img src="icons/action-qr-code.svg" alt="" />
               </div>
+
             </div>
           </div>
         </div>

@@ -85,7 +85,7 @@ const ReviewCard = ({
           className="rounded-full w-[30px] h-[30px] aspect-square object-cover"
           alt=""
           src={img}
-        />
+        />  
         <div className="flex flex-col">
           <figcaption className="text-base text-[#000000] font-medium dark:text-white">
             {name}
